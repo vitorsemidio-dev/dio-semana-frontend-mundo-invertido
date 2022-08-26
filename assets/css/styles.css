@@ -11,6 +11,12 @@
   --field-background-color: #000;
 }
 
+@media (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
 .light-theme {
   --page-background: linear-gradient(
     180deg,
@@ -59,12 +65,27 @@
   transform: rotateZ(180deg) scaleX(-1);
 }
 
+.dark-theme footer::before, .dark-theme footer::after {
+  opacity: 0.2;
+}
+
 /***  GENERIC STYLES ***/
 
 * {
   margin: 0;
   box-sizing: border-box;
   transition: 1s;
+}
+
+::-webkit-scrollbar {
+  width: 0.45rem;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 999px;
 }
 
 body {
@@ -78,7 +99,7 @@ h3 {
   font-size: 3rem;
   color: var(--primary-color);
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 0.5em;
 }
 
 p {
@@ -228,6 +249,7 @@ section {
   display: flex;
   justify-content: space-between;
   margin-bottom: 95px;
+  padding: 2rem;
 }
 
 /* Section 01 - Inverted World */
@@ -246,6 +268,19 @@ section {
 
 #section-inverted-world .section-texts h2 {
   max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  #section-inverted-world {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  #section-inverted-world .section-texts {
+    width: 100%;
+  }
 }
 
 /* Section 02 - Stranger Things Trailer */
@@ -274,6 +309,30 @@ section {
     var(--primary-color-contrast)
   );
   border-image-slice: 10;
+}
+
+
+@media (max-width: 768px) {
+  #section-stranger-things-trailer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 4rem;
+    padding: 2rem;
+  }
+
+  #section-stranger-things-trailer .section-texts {
+    width: 100%;
+  }
+
+  #section-stranger-things-trailer .video-frame,
+  #section-stranger-things-trailer .video-frame iframe {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 460px;
+  }
 }
 
 /* Section 03 - Stranger Things Gallery */
@@ -313,6 +372,30 @@ section {
   border: 10px solid var(--highlight-color);
 }
 
+
+@media (max-width: 768px) {
+  #section-stranger-things-gallery .container {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  #section-stranger-things-gallery .gallery-image {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  #section-stranger-things-gallery .container h2 {
+    width: 100%;
+  }
+
+  #section-stranger-things-gallery .gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* Section 04 - Dungeons & Dragons Form */
 
 #section-form {
@@ -338,6 +421,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 #section-form .form-content h3 {
@@ -385,6 +469,30 @@ section {
   color: var(--field-background-color);
 }
 
+
+@media (max-width: 768px) {
+  #section-form {
+    padding: 2rem;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  #section-form h2 {
+    width: 100%;
+  }
+
+  #section-form .form-content {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  #section-form .form-container {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
 /*** FOOTER STYLES ***/
 
 footer {
@@ -422,4 +530,12 @@ footer::before {
 footer::after {
   right: -50px;
   transform: rotateZ(10deg);
+}
+
+
+@media (max-width: 768px) {
+  footer::before, footer::after {
+    width: 150px;
+    height: 150px;
+  }
 }
