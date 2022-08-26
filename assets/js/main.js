@@ -16,6 +16,6 @@ import { subscribeToHellfireClube } from './data/hellfire-clube.js'
         }
 
         const id = await subscribeToHellfireClube(subscribe)
-        alert(`Inscrição ${id} adicionada com sucesso!`)
+        alert(`Inscrição adicionada com sucesso!`)
     })
 })()
