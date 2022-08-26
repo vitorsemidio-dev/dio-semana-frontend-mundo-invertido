@@ -311,7 +311,6 @@ section {
   border-image-slice: 10;
 }
 
-
 @media (max-width: 768px) {
   #section-stranger-things-trailer {
     display: flex;
@@ -371,7 +370,6 @@ section {
   object-fit: cover;
   border: 10px solid var(--highlight-color);
 }
-
 
 @media (max-width: 768px) {
   #section-stranger-things-gallery .container {
@@ -469,7 +467,6 @@ section {
   color: var(--field-background-color);
 }
 
-
 @media (max-width: 768px) {
   #section-form {
     padding: 2rem;
@@ -531,7 +528,6 @@ footer::after {
   right: -50px;
   transform: rotateZ(10deg);
 }
-
 
 @media (max-width: 768px) {
   footer::before, footer::after {
